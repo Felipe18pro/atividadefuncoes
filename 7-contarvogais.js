@@ -15,14 +15,19 @@ Programa desenvolvido por:
  - Felipe 
  - Leticia
 */
-let string = 'Luiz'
 
-function countVowels(string) {
-    let contador = 0 
-    
-    for(let i = 0; i < string.length; i++){
-        contador ++
-        console.log(contador)
+
+function countVowels(palavras) {
+    const vogais = 'aeiouAEIOU';
+    let contar = 0;
+
+    for (let i = 0; i < palavras.length; i++) {
+        if (vogais.includes(palavras[i])) {
+            contar++;
+        }
     }
-       
+    return contar;
 }
+
+console.log(countVowels("Sou do grupo vingadores")); 
+console.log(countVowels("Pare, até quando")); 
